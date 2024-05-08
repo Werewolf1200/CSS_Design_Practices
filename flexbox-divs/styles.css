@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(171, 215, 253);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-grow: 1;
+    padding: 0 40px;
+}
+
+.box1, .box2, .box3 {
+    width: 21rem;
+    height: 25rem;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 15px darkblue;
+    padding: 10px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+@media(max-width: 700px) {
+    .container {
+    height: 100%;
+    flex-direction: column;
+
+    }
+
+    .box1, .box2, .box3 {
+        max-width: 80%;
+        padding: 20px;
+    }
+
+}
