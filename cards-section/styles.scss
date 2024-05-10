@@ -1,0 +1,174 @@
+/* https://www.youtube.com/watch?v=l9QDvaRymOQ&list=WL&index=89&t=598s */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #111827;
+
+    span {
+        display: flex;
+        margin-bottom: 0.5rem;
+        color: #9ca3af;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        text-transform: capitalize;
+
+        img {
+            margin-left: 0.75rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #4f46e5;
+        }
+    }
+
+    h1 {
+        margin-bottom: 4rem;
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .grid {
+        display: grid;
+        gap: 1.25rem;
+        max-width: 64rem;
+        text-align: center;
+
+        @media(min-width: 640px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+
+        .card {
+            position: relative;
+            padding: 2.5rem;
+            background-color: #1f2937;
+
+            .body {
+                position: relative;
+
+                @media(min-width: 1024px) {
+                    padding-right: 13rem;
+
+                    &right {
+                        padding-right: 0 !important;
+                        padding-left: 12rem;
+                    }
+                }
+
+                h2 {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    margin-bottom: 1rem;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    color: #fff;
+                    text-transform: capitalize;
+
+                    @media(min-width:1280px) {
+                        font-size: 1.90 rem;
+                        line-height: 2.25rem;
+                    }
+                }
+
+                p{
+                    color: #9ca3af;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                transition: 0.6s;
+                z-index: 0;
+                background-color: #4f46e5;
+            }
+
+            &:hover {
+                box-shadow: 0.63rem 0.63rem 1.25rem 0.40rem rgb(0 0 0 / 53%);
+            }
+
+            &:nth-child(1)::before {
+                bottom: 0;
+                right: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+            }
+            &:nth-child(2)::before {
+                bottom: 0;
+                left: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+            }
+            &:nth-child(3)::before {
+                top: 0;
+                right: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+            }
+            &:nth-child(4)::before {
+                top: 0;
+                left: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+            }
+
+            p {
+                transition: 0.8s;
+            }
+
+            &:hover::before {
+                clip-path: circle(110vw at 100% 100%);
+            }
+
+            &:hover p {
+                color: #fff;
+            }
+
+            .circle {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+            }
+
+            &:nth-child(1) .circle {
+                background: url("./assets/net1.jpg") no-repeat 50% 50% / cover;
+                bottom: 0;
+                right: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+            }
+            &:nth-child(2) .circle {
+                background: url("./assets/net2.png") no-repeat 50% 50% / cover;
+                bottom: 0;
+                right: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+            }
+            &:nth-child(3) .circle {
+                background: url("./assets/net3.png") no-repeat 50% 50% / cover;
+                bottom: 0;
+                right: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+            }
+            &:nth-child(4) .circle {
+                background: url("./assets/net4.jpg") no-repeat 50% 50% / cover;
+                bottom: 0;
+                right: 0;
+                clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+            }
+        }
+    }
+}

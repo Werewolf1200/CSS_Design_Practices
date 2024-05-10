@@ -1,0 +1,160 @@
+/* https://www.youtube.com/watch?v=l9QDvaRymOQ&list=WL&index=89&t=598s */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #111827;
+}
+.section span {
+  display: flex;
+  margin-bottom: 0.5rem;
+  color: #9ca3af;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: capitalize;
+}
+.section span img {
+  margin-left: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4f46e5;
+}
+.section h1 {
+  margin-bottom: 4rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+.section .grid {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 64rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .section .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.section .grid .card {
+  position: relative;
+  padding: 2.5rem;
+  background-color: #1f2937;
+}
+.section .grid .card .body {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .section .grid .card .body {
+    padding-right: 13rem;
+  }
+  .section .grid .card .bodyright {
+    padding-right: 0 !important;
+    padding-left: 12rem;
+  }
+}
+.section .grid .card .body h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+@media (min-width: 1280px) {
+  .section .grid .card .body h2 {
+    font-size: 1.9 rem;
+    line-height: 2.25rem;
+  }
+}
+.section .grid .card .body p {
+  color: #9ca3af;
+}
+.section .grid .card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 0;
+  background-color: #4f46e5;
+}
+.section .grid .card:hover {
+  box-shadow: 0.63rem 0.63rem 1.25rem 0.4rem rgba(0, 0, 0, 0.53);
+}
+.section .grid .card:nth-child(1)::before {
+  bottom: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+}
+.section .grid .card:nth-child(2)::before {
+  bottom: 0;
+  left: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+}
+.section .grid .card:nth-child(3)::before {
+  top: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+}
+.section .grid .card:nth-child(4)::before {
+  top: 0;
+  left: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+}
+.section .grid .card p {
+  transition: 0.8s;
+}
+.section .grid .card:hover::before {
+  clip-path: circle(110vw at 100% 100%);
+}
+.section .grid .card:hover p {
+  color: #fff;
+}
+.section .grid .card .circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.section .grid .card:nth-child(1) .circle {
+  background: url("./assets/net1.jpg") no-repeat 50% 50%/cover;
+  bottom: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+}
+.section .grid .card:nth-child(2) .circle {
+  background: url("./assets/net2.png") no-repeat 50% 50%/cover;
+  bottom: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+}
+.section .grid .card:nth-child(3) .circle {
+  background: url("./assets/net3.png") no-repeat 50% 50%/cover;
+  bottom: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+}
+.section .grid .card:nth-child(4) .circle {
+  background: url("./assets/net4.jpg") no-repeat 50% 50%/cover;
+  bottom: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+}
+
+/*# sourceMappingURL=styles.css.map */
