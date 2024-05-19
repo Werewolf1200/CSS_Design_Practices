@@ -1,0 +1,88 @@
+/* https://www.youtube.com/watch?v=rg7Fvvl3taU&t=1722s */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+
+}
+
+.testimonial {
+    background: aqua;
+    border-radius: 0.5rem;
+}
+
+.testimonial:nth-child(1) {
+    grid-area: one;
+}
+.testimonial:nth-child(2) {
+    grid-area: two;
+}
+.testimonial:nth-child(3) {
+    grid-area: three;
+}
+.testimonial:nth-child(4) {
+    grid-area: four;
+}
+.testimonial:nth-child(5) {
+    grid-area: five;
+}
+
+
+@media (min-width: 30em) {
+    .testimonial-grid {
+        grid-template-areas:
+        'one one' 
+        'two five'
+        'three five'
+        'four four';
+    }
+}
+
+@media (min-width: 50em) {
+    /*
+    .grid-col-span-2 {
+    grid-column: span 2;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .testimonial:last-child {
+    grid-column-start: 4;
+    grid-row: 1 / span 2;
+    }
+*/
+    .testimonial-grid {
+        grid-template-areas:
+        'one one two five'
+        'three four four five';
+    }
+}
+
+
+
+.testimonial:last-child {
+    background: rebeccapurple;
+}
