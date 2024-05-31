@@ -1,0 +1,56 @@
+/* https://www.youtube.com/watch?v=bnC-kuL_CYw&list=WL&index=2 */
+body {
+  background-color: azure;
+}
+
+h1 {
+  color: darkblue;
+  font-weight: 900;
+  font-family: monospace;
+  text-align: center;
+}
+
+main {
+  height: 800px;
+  width: 80%;
+  margin: 0 auto;
+  background-image: url("Imagen3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main article {
+  color: #fff;
+  font-family: monospace;
+  height: 200px;
+  width: 500px;
+  margin: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level1 {
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+}
+
+.level2 {
+  background-color: rgba(154, 205, 50, 0.3);
+  backdrop-filter: blur(30px);
+}
+
+.level3 {
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(14, 3, 80, 0.2)
+  );
+}
