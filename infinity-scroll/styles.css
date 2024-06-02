@@ -1,0 +1,96 @@
+/* https://www.youtube.com/watch?v=Reu0hHbis5w&list=WL&index=13 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1600px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollleft {
+  to {
+    left: -200px;
+  }
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: skyblue;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(200px * 10), 100%);
+
+  animation-name: scrollleft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.item1 {
+  animation-delay: calc(30s / 10 * (10 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 10 * (10 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 10 * (10 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 10 * (10 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 10 * (10 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 10 * (10 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 10 * (10 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 10 * (10 - 8) * -1);
+}
+
+.item9 {
+  animation-delay: calc(30s / 10 * (10 - 9) * -1);
+}
+
+.item10 {
+  animation-delay: calc(30s / 10 * (10 - 10) * -1);
+}
